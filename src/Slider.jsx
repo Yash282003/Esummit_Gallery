@@ -1,8 +1,18 @@
 import React, { useRef, useState } from "react";
+import { useWindowSize } from "./useWindowSize";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import Button from "react-bootstrap/Button";
+import img1 from './assets/img1.JPG'
+import img2 from './assets/img2.JPG'
+import img3 from './assets/img3.JPG'
+import img4 from './assets/img4.JPG'
+import img5 from './assets/img5.JPG'
+import img6 from './assets/img6.JPG'
+import img7 from './assets/img7.JPG'
+import img8 from './assets/img8.JPG'
+import img9 from './assets/img9.JPG'
 import Modal from "react-bootstrap/Modal";
 import { IoMdArrowBack } from "react-icons/io";
 // Import Swiper styles
@@ -17,9 +27,12 @@ import { EffectCoverflow, Pagination } from "swiper/modules";
 
 export default function Slider() {
   const [clickedImage, setClickedImage] = useState(null);
+  const { width } = useWindowSize(); // Get window width using custom hook
 
   const handleImageClick = (imageSrc) => {
-    setClickedImage(imageSrc);
+    if (width >= 600) {
+      setClickedImage(imageSrc);
+    }
   };
 
   const handleCloseModal = () => {
@@ -45,73 +58,73 @@ export default function Slider() {
       >
         <SwiperSlide>
           <img
-            src="https://swiperjs.com/demos/images/nature-1.jpg"
+            src={img1}
             onClick={() =>
-              handleImageClick("https://swiperjs.com/demos/images/nature-1.jpg")
+              handleImageClick(img1)
             }
           />
         </SwiperSlide>
         <SwiperSlide>
           <img
-            src="https://swiperjs.com/demos/images/nature-2.jpg"
+            src={img2}
             onClick={() =>
-              handleImageClick("https://swiperjs.com/demos/images/nature-2.jpg")
+              handleImageClick(img2)
             }
           />
         </SwiperSlide>
         <SwiperSlide>
           <img
-            src="https://swiperjs.com/demos/images/nature-4.jpg"
+            src={img3}
             onClick={() =>
-              handleImageClick("https://swiperjs.com/demos/images/nature-4.jpg")
+              handleImageClick(img3)
             }
           />
         </SwiperSlide>
         <SwiperSlide>
           <img
-            src="https://swiperjs.com/demos/images/nature-3.jpg"
+            src={img4}
             onClick={() =>
-              handleImageClick("https://swiperjs.com/demos/images/nature-3.jpg")
+              handleImageClick(img4)
             }
           />
         </SwiperSlide>
         <SwiperSlide>
           <img
-            src="https://swiperjs.com/demos/images/nature-5.jpg"
+            src={img5}
             onClick={() =>
-              handleImageClick("https://swiperjs.com/demos/images/nature-5.jpg")
+              handleImageClick(img5)
             }
           />
         </SwiperSlide>
         <SwiperSlide>
           <img
-            src="https://swiperjs.com/demos/images/nature-6.jpg"
+            src={img6}
             onClick={() =>
-              handleImageClick("https://swiperjs.com/demos/images/nature-6.jpg")
+              handleImageClick(img6)
             }
           />
         </SwiperSlide>
         <SwiperSlide>
           <img
-            src="https://swiperjs.com/demos/images/nature-7.jpg"
+            src={img7}
             onClick={() =>
-              handleImageClick("https://swiperjs.com/demos/images/nature-7.jpg")
+              handleImageClick(img7)
             }
           />
         </SwiperSlide>
         <SwiperSlide>
           <img
-            src="https://swiperjs.com/demos/images/nature-8.jpg"
+            src={img8}
             onClick={() =>
-              handleImageClick("https://swiperjs.com/demos/images/nature-8.jpg")
+              handleImageClick(img8)
             }
           />
         </SwiperSlide>
         <SwiperSlide>
           <img
-            src="https://swiperjs.com/demos/images/nature-9.jpg"
+            src={img9}
             onClick={() =>
-              handleImageClick("https://swiperjs.com/demos/images/nature-9.jpg")
+              handleImageClick(img9)
             }
           />
         </SwiperSlide>

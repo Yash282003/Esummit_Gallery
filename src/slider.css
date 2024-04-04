@@ -48,3 +48,38 @@ body {
   height: 600px; 
   display: block;
 }
+
+
+@media screen and (max-width: 875px){
+  .modal-image {
+    width: 650px;
+    height: 500px; 
+    display: block;
+  }
+  
+} 
+@media screen and (max-width: 785px){
+  .modal-image {
+    width: 580px;
+    height:480px; 
+    display: block;
+  }
+  
+} 
+
+@media screen and (max-width: 700px){
+  .modal-image {
+    width: 550px;
+    height:450px; 
+    display: block;
+  }
+  
+} 
+
+/* @media screen and (max-width: 600px){
+  .modal-image {
+   
+    display: none;
+  }
+  
+}  */
